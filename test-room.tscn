@@ -801,7 +801,7 @@ sources/2 = SubResource("TileSetAtlasSource_kwnvp")
 sources/3 = SubResource("TileSetAtlasSource_b54vl")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dveuc"]
-size = Vector2(68, 24)
+size = Vector2(670, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c285i"]
 size = Vector2(4, 4)
@@ -816,15 +816,17 @@ tile_map_data = PackedByteArray("AAAyAPj/AQACAAUAAAAyAPf/AQACAAQAAAAyAPb/AQACAAQ
 tile_set = SubResource("TileSet_fulxc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(525, -76)
+position = Vector2(593, -93)
 collision_layer = 3
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-301, 0)
 shape = SubResource("RectangleShape2D_dveuc")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(0.539062, 0.195312)
+position = Vector2(-300.75, 0)
+scale = Vector2(5.23828, 0.195312)
 texture = ExtResource("6_dveuc")
 
 [node name="Hook" type="StaticBody2D" parent="."]
@@ -860,6 +862,10 @@ position = Vector2(20, -18)
 zoom = Vector2(1.2, 1.2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="Line2D" type="Line2D" parent="Player"]
+width = 5.78
+default_color = Color(0.145361, 0.158173, 0.292354, 1)
 
 [node name="Anchor" type="RigidBody2D" parent="."]
 unique_name_in_owner = true
